@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CHƯƠNG TRÌNH QUẢN LÝ NGHỈ PHÉP CỦA CÔNG TY</h1>
+    <form action="#">
+        <div>
+            <!-- Thêm vào danh sách nhân viên mới -->
+            <h3>*** Thêm nhân viên mới vào danh sách công ty:</h3>
+            <table>
+                <tr>
+                    <td>Tên:</td>
+                    <td><input id="name-nv" type="text" placeholder="Họ và tên"></td>
+                </tr>
+                <tr>
+                    <td>Giới tính:</td>
+                    <td><Select id="GioitinhNV">
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                        <option value="Khác">Khác</option>
+                    </Select></td>
+                </tr>
+                <tr>
+                    <td>Mã nhân viên:</td>
+                    <td><input id="ma-nv" type="number" placeholder="Mã 3 số"></td>
+                </tr>
+                <tr>
+                    <td>Năm sinh:</td>
+                    <td><input type="number" id="namsinh-nv" placeholder="Năm sinh"></td>
+                </tr>
+                <tr>
+                    <td>Năm làm việc:</td>
+                    <td><input type="number" id="nam-lv" placeholder="Năm bắt đầu làm việc"></td>
+                </tr>
+                <tr>
+                    <td><button id="btn-addNV" type="button">Thêm nhân viên</button></td>
+                    <td><button type="reset">Reset</button></td>
+                </tr>
+            </table>
+            <!-- Tên:<input id="name-nv" type="text" placeholder="Họ và tên"> <br>
+            Giới tính: <Select id="GioitinhNV">
+                <option value="Nam">Nam</option>
+                <option value="Nữ">Nữ</option>
+                <option value="Khác">Khác</option>
+            </Select> <br>
+            Mã nhân viên: <input id="ma-nv" type="number" placeholder="Mã 3 số"> <br>
+            Năm sinh: <input type="number" id="namsinh-nv" placeholder="Năm sinh"> <br>
+            Năm làm việc: <input type="number" id="nam-lv" placeholder="Năm bắt đầu làm việc"> <br>
+            <button id="btn-addNV" type="button">Thêm nhân viên</button> <br> -->
+        </div>
+    </form>
+    
+    <form action="#">
+        <div>
+            <!-- Xóa bỏ nhân viên đã nghỉ việc -->
+            <h3>*** Xóa nhân viên đã nghỉ việc khỏi danh sách công ty:</h3>
+            <!-- <br> -->
+            <p>Mời nhập mã nhân viên (sử dụng chức năng hiển thị danh sách nhân viên để tìm kiếm):</p>
+            <table >
+                <tr>
+                    <td>Mã nhân viên:</td>
+                    <td><input type="number" id="maNV-xoa"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button onclick="xoaNV()">Click để xóa nhân viên</button></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    
+    <form action="#">
+        <div>
+            <!-- Thực hiện xin nghỉ phép năm cho nhân viên công ty -->
+            <h3>*** Đăng kí nghỉ phép cho nhân viên công ty:</h3>
+            <p>Mời nhập mã nhân viên (sử dụng chức năng hiển thị danh sách nhân viên để tìm kiếm):</p>
+            <table >
+                <tr>
+                    <td>Mã nhân viên:</td>
+                    <td><input type="number" id="maNV-np"></td>
+                </tr>
+                <tr>
+                    <td>Ngày bắt đầu nghỉ phép:</td>
+                    <td><input type="date" id="begin-day"></td>
+                </tr>
+                <tr>
+                    <td>Ngày kết thúc nghỉ phép:</td>
+                    <td><input type="date" id="end-day"></td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center"><button onclick="xinNP()">Click để xin nghỉ phép</button></td> 
+                </tr>
+            </table>
+        </div>
+    </form>
+    
+    <form action="#">
+        <div>
+            <!-- Kiểm tra danh sách nhân viên hiện có -->
+            <h3>*** Hiển thị danh sách nhân viên trong công ty:</h3>
+            <button onclick="showDS()" id="btn-showDS">Hiển thị danh sách</button> <br>
+            <br>
+            <!-- <button type="reset">Reset</button> -->
+            <table id="bangdsNV" border="1">
+                <tr>
+                    <th>Tên nhân viên</th>
+                    <th>Mã nhân viên</th>
+                    <th>Năm sinh</th>
+                    <th>Năm làm việc</th>
+                    <th>Giới tính</th>
+                    <th>Số ngày phép còn lại</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+    
+    <script src="./H_casestudy.js"></script>
+</body>
+</html>
